@@ -1,26 +1,31 @@
-import React, { useEffect, useState } from 'react'
-import './App.css'
-import Login from './component/Login'
-import { getTokenFromUrl } from './spotify'
-const App = () => {
-  useEffect(()=>{
-        const [token, setToken] = useState;
-        const hash =getTokenFromUrl();
-        window.location.hash = '';
-        const _token = hash.access_token;
-        if(_token){
-          setToken(_token);
-        }
-        console.log("i have a token ",token);
-  },[])
+import React, {useEffect, useState} from 'react';
+import Login from './component/Login';
+import { getTokenFromUrl } from './spotify';
+import './App.css';
+function App() {
+  const [token, setToken] =useState(null);
+ useEffect(()=>{
+  const hash = getTokenFromUrl();
+  window.location.hash ="";
+  const _token = hash.access_token;
+    if (_token){
+      setToken(_token);
+    }
+    console.log('i have a token ', token);
+ },[])
   return (
-    <div className='App'>
+    <div>
         {
-            token?(<h1>im in now</h1> ) : (<Login/>)
-        }    
+      token?
+      (
+        // <Player/>    
+        <h1>im logged in </h1>    
+        ):(
+        <Login/>
+        )}
     </div>
   )
 }
 
-export default App
 
+export default App
