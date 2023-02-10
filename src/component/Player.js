@@ -5,7 +5,7 @@ export default  function Player({code}) {
     const accessToken = useAUTH(code)
   return (
     <div>
-      {code}    
+      hello weeorfirtjgdf bmvxnczdlksifengjfbcxhjl difjdhvkcfn, mjh nd,fxcjhknms fcxjklfmcx jnlfms,cx lm   
     </div>
   )
 }
