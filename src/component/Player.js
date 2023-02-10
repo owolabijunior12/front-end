@@ -1,11 +1,11 @@
 import React from 'react'
 
-function Player() {
+export default  function Player({code}) {
   return (
     <div>
-      fdbhvxvubjkd;oxuzcbv'olj
+      {code}    
     </div>
   )
 }
 
-export default Player
+
