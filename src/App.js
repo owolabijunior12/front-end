@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import Login from './component/Login';
+import Player from './component/Player';
 import { getTokenFromUrl } from './spotify';
 import './App.css';
 function App() {
@@ -18,8 +19,7 @@ function App() {
         {
       token?
       (
-        // <Player/>    
-        <h1>im logged in </h1>    
+        <Player/>           
         ):(
         <Login/>
         )}
